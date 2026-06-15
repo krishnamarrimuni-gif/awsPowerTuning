@@ -315,8 +315,8 @@ curl -X DELETE https://YOUR_API_URL/resume/leela-krishna \
 ## 👤 Author
 
 **Leela Krishna**
-- 🔗 LinkedIn: [linkedin.com/in/leelakrishna](https://linkedin.com/in/leelakrishna)
-- 🐙 GitHub: [github.com/leelakrishna](https://github.com/leelakrishna)
+- 🔗 LinkedIn: [linkedin.com/in/leelakrishna](www.linkedin.com/in/krishnam07)
+- 🐙 GitHub: [github.com/leelakrishna]([ub.com/krishnamarrimuni-gif](https://github.com/krishnamarrimuni-gif))
 
 ---
 
