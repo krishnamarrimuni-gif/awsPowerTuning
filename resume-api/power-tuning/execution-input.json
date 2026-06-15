@@ -1,0 +1,12 @@
+{
+  "lambdaARN": "arn:aws:lambda:YOUR_REGION:YOUR_ACCOUNT_ID:function:person-details-read",
+  "powerValues": [128, 256, 512, 1024, 2048],
+  "num": 10,
+  "payload": {
+    "pathParameters": {
+      "id": "leela-krishna"
+    }
+  },
+  "parallelInvocation": true,
+  "strategy": "cost"
+}
