@@ -125,6 +125,9 @@ erDiagram
 | 1024 MB | 125 ms | $0.85 | Over-provisioned |
 | 2048 MB | 124 ms | $1.68 | Overkill |
 
+<img width="2476" height="1173" alt="image" src="https://github.com/user-attachments/assets/36e144d6-2eba-45ae-9058-d8822fa39a06" />
+
+
 **Winner: 256 MB** — same speed as 1024 MB at 75% less cost.
 
 ```mermaid
