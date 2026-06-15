@@ -10,8 +10,6 @@ Continuous Load Testing: Integrates Postman and the Newman CLI to execute automa
 
 <img width="1332" height="406" alt="image" src="https://github.com/user-attachments/assets/497e9531-382f-4752-8c06-3f795821e0cf" />
 
-<img width="1828" height="794" alt="image" src="https://github.com/user-attachments/assets/cc2497ab-bbf5-48a8-b1e0-c825b760842d" />
-
 <img width="2202" height="1254" alt="image" src="https://github.com/user-attachments/assets/a1a84d88-cc37-4298-a12c-740dbdd0b784" />
 
 <img width="2459" height="1198" alt="image" src="https://github.com/user-attachments/assets/787ffb8d-f6ba-4c8c-945c-60b407d080be" />
