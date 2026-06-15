@@ -146,72 +146,6 @@ xychart-beta
 
 ---
 
-## 🚀 How to Deploy
-
-### Prerequisites
-```bash
-# Install AWS CLI
-brew install awscli
-
-# Install AWS SAM CLI
-brew install aws-sam-cli
-
-# Configure credentials
-aws configure
-```
-
-### Deploy in 3 commands
-```bash
-git clone https://github.com/YOUR_USERNAME/resume-api.git
-cd resume-api/infra
-sam build && sam deploy --guided
-```
-
-### Seed your resume data
-```bash
-aws dynamodb put-item \
-  --table-name ResumeTable \
-  --item file://seed/resume.json
-```
-
----
-
-## 🧪 Test the API
-
-### Public read — no auth needed
-```bash
-curl https://YOUR_API_URL/resume/leela-krishna
-```
-
-### Create — API key required
-```bash
-curl -X POST https://YOUR_API_URL/resume \
-  -H "x-api-key: YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": "leela-krishna",
-    "name": "Leela Krishna",
-    "experience": [{"company": "XYZ", "role": "Cloud Engineer"}],
-    "certifications": ["AWS Solutions Architect"]
-  }'
-```
-
-### Update — API key required
-```bash
-curl -X PUT https://YOUR_API_URL/resume/leela-krishna \
-  -H "x-api-key: YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"certifications": ["AWS Solutions Architect", "AWS DevOps Pro"]}'
-```
-
-### Delete — API key required
-```bash
-curl -X DELETE https://YOUR_API_URL/resume/leela-krishna \
-  -H "x-api-key: YOUR_API_KEY"
-```
-
----
-
 ## 🗺️ Roadmap
 
 - [x] IAM least privilege — 4 separate roles
@@ -228,18 +162,6 @@ curl -X DELETE https://YOUR_API_URL/resume/leela-krishna \
 
 ---
 
-## 📸 Screenshots
-
-| Step | Screenshot |
-|---|---|
-| API Gateway Setup | ![API GW](screenshots/api-gateway.png) |
-| CloudFront Distribution | ![CloudFront](screenshots/cloudfront.png) |
-| DynamoDB Table | ![DynamoDB](screenshots/dynamodb.png) |
-| Power Tuning Results | ![Power Tuning](screenshots/lambda-power-tuning.png) |
-| Postman Tests | ![Postman](screenshots/postman-tests.png) |
-
----
-
 ## 🧠 What I Learned
 
 - Designing **separate APIs per operation** instead of one monolithic endpoint
@@ -248,16 +170,3 @@ curl -X DELETE https://YOUR_API_URL/resume/leela-krishna \
 - How **CloudFront caching** reduces Lambda invocations and cuts costs
 - The difference between **synchronous** (API Gateway) and **event-driven** (DynamoDB Streams) patterns
 
----
-
-## 👤 Author
-
-**Leela Krishna**
-- 🔗 LinkedIn: [linkedin.com/in/leelakrishna](www.linkedin.com/in/krishnam07)
-- 🐙 GitHub: [github.com/leelakrishna]([ub.com/krishnamarrimuni-gif](https://github.com/krishnamarrimuni-gif))
-
----
-
-## 📄 License
-
-MIT License — feel free to fork and adapt for your own resume API!
