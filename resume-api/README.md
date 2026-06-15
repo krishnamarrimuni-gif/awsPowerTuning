@@ -6,33 +6,8 @@
 
 ## 🏗️ Architecture Overview
 
-```mermaid
-flowchart TD
-    A([Public User]) -->|GET /resume| B
-    C([Owner]) -->|POST PUT DELETE + API Key| B
+<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/bb08af14-1a23-47df-8001-7852f9bf8535" />
 
-    B[CloudFront CDN\nHTTPS + Cache] --> D[API Gateway\nSeparate routes per operation]
-
-    D -->|GET - no auth| E[Read Lambda\nResumeReadRole]
-    D -->|POST - API key| F[Create Lambda\nResumeCreateRole]
-    D -->|PUT - API key| G[Update Lambda\nResumeUpdateRole]
-    D -->|DELETE - API key| H[Delete Lambda\nResumeDeleteRole]
-
-    E -->|GetItem| I[(DynamoDB\nResumeTable)]
-    F -->|PutItem| I
-    G -->|UpdateItem| I
-    H -->|DeleteItem| I
-
-    style A fill:#e1f5ee,stroke:#0F6E56
-    style C fill:#e1f5ee,stroke:#0F6E56
-    style B fill:#EEEDFE,stroke:#534AB7
-    style D fill:#EEEDFE,stroke:#534AB7
-    style E fill:#E6F1FB,stroke:#185FA5
-    style F fill:#E6F1FB,stroke:#185FA5
-    style G fill:#E6F1FB,stroke:#185FA5
-    style H fill:#E6F1FB,stroke:#185FA5
-    style I fill:#FAEEDA,stroke:#854F0B
-```
 
 ---
 
@@ -116,46 +91,6 @@ erDiagram
         string created_at
         string updated_at
     }
-```
-
----
-
-## 🗂️ Project Structure
-
-```
-resume-api/
-│
-├── 📁 security/
-│   ├── read-policy.json             
-│   ├── create-policy.json           
-│   ├── update-policy.json           
-│   ├── delete-policy.json           
-│   └── README.md                    
-│
-├── 📁 src/
-│   ├── read/handler.py              
-│   ├── create/handler.py            
-│   ├── update/handler.py            
-│   └── delete/handler.py            
-│
-├── 📁 infra/
-│   └── template.yaml                
-│
-├── 📁 website/
-│   └── index.html                   
-│
-├── 📁 power-tuning/
-│   ├── execution-input.json
-│   └── results/tuning-results.md
-│
-├── 📁 screenshots/
-│   ├── api-gateway.png
-│   ├── cloudfront.png
-│   ├── dynamodb.png
-│   ├── lambda-power-tuning.png
-│   └── postman-tests.png
-│
-└── README.md
 ```
 
 ---
